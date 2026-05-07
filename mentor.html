@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mentorship – GEC Siwan Startup Cell</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
   /* ═══════════════════════════════════════════
      RESET & BASE
@@ -63,6 +63,13 @@
   .nav-inner { max-width:1180px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between; }
   .nav-logo { display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text); }
   .logo-box { width:38px;height:38px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:13px;color:#fff; }
+  .logo-box img{
+      width:60px;
+      height:60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right:1.1rem;
+    }
   .logo-name { font-family:'Syne',sans-serif;font-size:17px;font-weight:700;display:flex;flex-direction:column;line-height:1; }
   .logo-name small { font-size:10px;font-weight:400;color:var(--muted);margin-top:2px; }
   .back-btn { display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--muted);background:var(--surface);border:1px solid var(--border);padding:8px 18px;border-radius:100px;text-decoration:none;transition:all .2s; }
@@ -371,7 +378,7 @@
   /* ═══════════════════════════════════════════
      FOOTER
   ═══════════════════════════════════════════ */
-  .footer { position:relative;z-index:1;border-top:1px solid var(--border);padding:22px 28px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;color:var(--muted);text-align:center; }
+  .footer { position:relative;z-index:1;border-top:1px solid var(--border);padding:22px 28px;display:flex;align-items:center;justify-content:space-around;gap:8px;font-size:12px;color:var(--muted);text-align:center; }
   .footer i { color:#f43f5e; }
 
   /* ═══════════════════════════════════════════
@@ -427,16 +434,16 @@
 </div>
 
 <!-- Toast Container -->
-<!-- <div class="toast-wrap" id="toastWrap"></div> -->
+<div class="toast-wrap" id="toastWrap"></div>  <!-- Toasts will be injected here by JS -->
 
 <!-- Mentor Popup -->
-<!-- <div class="popup-overlay" id="popupOverlay">
+ <div class="popup-overlay" id="popupOverlay"> 
   <div class="popup-box" id="popupBox">
     <button class="popup-close" id="popupClose"><i class="fa-solid fa-xmark"></i></button>
     <div class="popup-top">
       <img id="pp-photo" src="" alt="" class="popup-photo"/>
       <div>
-        <div class="popup-name" id="pp-name"></div>
+        <div class="popup-name" id="pp-name"></div>  
         <div class="popup-role" id="pp-role"></div>
         <div class="popup-badges" id="pp-badges"></div>
       </div>
@@ -453,14 +460,16 @@
       <div class="popup-links" id="pp-links"></div>
     </div>
   </div>
-</div> -->
+</div> 
 
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <div class="logo-box">IN</div>
-      <div class="logo-name">InnoVate <small>GEC Siwan</small></div>
+      <div class="logo-box">
+        <img src="IMAGES/Startup Cell Logo.png">
+      </div>
+      <div class="logo-name">Startup Cell <small>GEC Siwan</small></div>
     </a>
     <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
   </div>
@@ -846,7 +855,8 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-  Made with <i class="fa-solid fa-heart"></i> by CSE-IoT Students &nbsp;·&nbsp; GEC Siwan Startup Cell &copy; 2025
+  <p>&copy; 2026 Startup Cell - GEC Siwan. All Rights Reserved.</p>
+  <p>Design & Developed By</i> Yuvraj Singh</p>
 </footer>
 
 <script>
@@ -981,6 +991,7 @@ document.querySelectorAll('.faq-q').forEach(q => {
     if(!isOpen) item.classList.add('open');
   });
 });
+
 
 /* ── Toast ── */
 function showToast(type, title, msg) {
