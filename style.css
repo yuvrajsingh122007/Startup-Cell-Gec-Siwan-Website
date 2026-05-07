@@ -142,13 +142,19 @@ img { max-width: 100%; display: block; }
 .logo-icon {
   width: 60px; height: 60px;
   background: var(--gradient);
-  border-radius: 10px;
+  border-radius: 50%;  /* 10px */
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 13px;
   color: #fff;
   letter-spacing: 0.5px;
+}
+.logo-icon img{
+  height:60px;
+  width:60px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .logo-text {
   font-family: var(--font-display);
@@ -654,7 +660,7 @@ img { max-width: 100%; display: block; }
   color: var(--text-muted);
 }
 .contact-item i { color: var(--accent); font-size: 16px; margin-top: 2px; flex-shrink: 0; }
-.contact-form-wrap { }
+.contact-form-wrap {}
 
 /* =============================================
    FOOTER

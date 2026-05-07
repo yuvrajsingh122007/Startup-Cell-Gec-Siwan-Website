@@ -100,6 +100,13 @@
       display:flex; align-items:center; justify-content:center;
       font-family:'Syne',sans-serif; font-weight:800; font-size:13px; color:#fff;
     }
+    .logo-box img{
+      width:60px;
+      height:60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right:1rem;
+    }
     .logo-name {
       font-family:'Syne',sans-serif; font-size:17px; font-weight:700;
       display:flex; flex-direction:column; line-height:1;
@@ -358,8 +365,10 @@
     <!-- ── Top Bar ── -->
     <header class="topbar">
       <a href="services.html" class="logo">
-        <div class="logo-box">IN</div>
-        <div class="logo-name">InnoVate <small>GEC Siwan</small></div>
+        <div class="logo-box">
+          <img src="IMAGES/Startup Cell Logo.png" alt="Startup Cell Logo">
+        </div>
+        <div class="logo-name">Startup Cell <small>GEC Siwan</small></div>
       </a>
       <a href="services.html" class="back-btn">
         <i class="fa-solid fa-arrow-left"></i> Back to Services
@@ -404,7 +413,7 @@
       </div>
 
       <div class="sidebar-info">
-        <p><strong>Response time:</strong> Within <strong>5–7 working days</strong>.<br/>All ideas are kept <strong>strictly confidential</strong>.</p>
+        <p><strong>Response time:</strong> Within <strong>5-7 working days</strong>.<br/>All ideas are kept <strong>strictly confidential</strong>.</p>
       </div>
     </aside>
 
@@ -420,7 +429,7 @@
         <div class="form-row reveal d1">
           <div class="field">
             <label><i class="fa-solid fa-user"></i> Full Name <em style="color:#f43f5e">*</em></label>
-            <input type="text" id="name" name="name" placeholder="e.g. Aryan Kumar Singh" required/>
+            <input type="text" id="name" name="name" placeholder="e.g. Yuvraj Singh" required/>
           </div>
           <div class="field">
             <label><i class="fa-solid fa-code-branch"></i> Branch <em style="color:#f43f5e">*</em></label>
@@ -431,18 +440,18 @@
         <div class="form-row reveal d2">
           <div class="field">
             <label><i class="fa-solid fa-layer-group"></i> Semester <em style="color:#f43f5e">*</em></label>
-            <input type="text" id="semester" name="semester" placeholder="e.g. 4th" required/>
+            <input type="text" id="semester" name="semester" placeholder="e.g. 2nd" required/>
           </div>
           <div class="field">
             <label><i class="fa-solid fa-id-card"></i> Registration No. <em style="color:#f43f5e">*</em></label>
-            <input type="text" id="regNo" name="regNo" placeholder="e.g. 2023XXXXXXX" required/>
+            <input type="text" id="regNo" name="regNo" placeholder="e.g. 25155XXXXXXX" required/>
           </div>
         </div>
 
         <div class="form-row reveal d3">
           <div class="field">
             <label><i class="fa-solid fa-envelope"></i> Email Address <em style="color:#f43f5e">*</em></label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required/>
+            <input type="email" id="email" name="email" placeholder="your@gmail.com" required/>
           </div>
           <div class="field">
             <label><i class="fa-solid fa-phone"></i> Contact Number <em style="color:#f43f5e">*</em></label>
@@ -486,7 +495,8 @@
 
     <!-- Footer -->
     <footer class="page-footer">
-      Made with <i class="fa-solid fa-heart"></i> by CSE-IoT Students &nbsp;·&nbsp; GEC Siwan Startup Cell &copy; 2025
+      <p>&copy; 2026 Startup Cell - GEC Siwan Startup Cell. All Rights Reserved.</p>
+        <p>Design & Developed By</i> Yuvraj Singh</p>
     </footer>
 
   </div><!-- /page-wrap -->
