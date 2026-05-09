@@ -152,11 +152,32 @@ img {
     font-size: 1.4rem;
 }
 
-.logo-accent {
+.logo-icon img{
+  height:60px;
+  width:60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.logo-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;                 
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.logo-text span {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--text-muted);   /* Optional: Add a muted color for the subtext */
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+/* .logo-accent {
     color: var(--text-muted);
     font-weight: 400;
     font-size: 0.85rem;
-}
+} */
 
 .nav-links {
     display: flex;
