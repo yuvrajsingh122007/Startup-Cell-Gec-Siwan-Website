@@ -180,13 +180,29 @@
     background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
     padding:28px 24px;position:relative;overflow:hidden;
     transition:transform .4s cubic-bezier(.23,1,.32,1),border-color .3s,box-shadow .4s;
-    backdrop-filter:blur(12px);cursor:pointer;
+    backdrop-filter:blur(12px);cursor:pointer; display:flex;flex-direction:column;
+    gap: 12px;
   }
   .mentor-card::before {
     content:'';position:absolute;inset:0;border-radius:var(--radius);
     background:radial-gradient(circle at 70% 0%,rgba(99,102,241,.12),transparent 65%);
     opacity:0;transition:opacity .4s;
   }
+
+  .mentor-actions .m-btn {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  height: 46px;
+  padding: 19px 25px;   /* Increased padding for better clickability and size. */
+  font-size: 14px;
+}
+
+  .mentor-actions a{
+  position: relative;
+  z-index: 1000;                    /*MENTORS card fixed and clickable*/
+  pointer-events: auto;
+}
   .mentor-card:hover { transform:translateY(-8px);border-color:rgba(99,102,241,.35);box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 60px rgba(99,102,241,.15); }
   .mentor-card:hover::before { opacity:1; }
 
@@ -527,10 +543,10 @@
     </div>
     <div class="cat-grid reveal d1">
       <div class="cat-chip active" data-cat="all"><i class="fa-solid fa-th"></i> All Mentors</div>
-      <div class="cat-chip" data-cat="web"><i class="fa-solid fa-laptop-code"></i> Web Development</div>
-      <div class="cat-chip" data-cat="app"><i class="fa-solid fa-mobile-screen"></i> App Development</div>
-      <div class="cat-chip" data-cat="ai"><i class="fa-solid fa-robot"></i> AI / ML</div>
-      <div class="cat-chip" data-cat="design"><i class="fa-solid fa-palette"></i> UI / UX Design</div>
+      <!-- <div class="cat-chip" data-cat="web"><i class="fa-solid fa-laptop-code"></i> Web Development</div> -->
+      <!-- <div class="cat-chip" data-cat="app"><i class="fa-solid fa-mobile-screen"></i> App Development</div> -->
+      <!-- <div class="cat-chip" data-cat="ai"><i class="fa-solid fa-robot"></i> AI / ML</div> -->
+      <!-- <div class="cat-chip" data-cat="design"><i class="fa-solid fa-palette"></i> UI / UX Design</div> -->
       <div class="cat-chip" data-cat="startup"><i class="fa-solid fa-rocket"></i> Startup & Business</div>
       <div class="cat-chip" data-cat="marketing"><i class="fa-solid fa-bullhorn"></i> Marketing</div>
       <div class="cat-chip" data-cat="career"><i class="fa-solid fa-briefcase"></i> Career Guidance</div>
@@ -549,14 +565,14 @@
     <div class="mentors-grid" id="mentorsGrid">
 
       <!-- Mentor 1 -->
-      <div class="mentor-card reveal d1" data-cat="web startup" data-mentor="0">
+      <div class="mentor-card reveal d1" data-cat="startup career marketing " data-mentor="0">  <!--chossing mentor category-->
         <div class="status-dot"></div>
         <div class="mentor-header">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" class="mentor-photo"/>
+          <img src="IMAGES/Dr. Suryakant.jpeg" alt="" class="mentor-photo"/>
           <div class="mentor-meta">
-            <div class="mentor-name">Aryan Kumar</div>
-            <div class="mentor-role">Senior Web Developer · TechCorp</div>
-            <span class="mentor-exp"><i class="fa-solid fa-briefcase"></i> 5 Years</span>
+            <div class="mentor-name">Dr. Surya Kant Singh</div>
+            <div class="mentor-role">Principal · Gec Siwan</div>
+            <span class="mentor-exp"><i class="fa-solid fa-briefcase"></i> 8 Years</span>
           </div>
         </div>
         <p class="mentor-bio">Helping early-stage startups build scalable web products. Passionate about clean code and startup culture.</p>
@@ -564,19 +580,31 @@
           <span class="skill-tag">React</span><span class="skill-tag">Node.js</span><span class="skill-tag">Firebase</span><span class="skill-tag">Startup</span>
         </div>
         <div class="mentor-actions">
-          <button class="m-btn m-btn-primary open-popup" data-mentor="0"><i class="fa-solid fa-eye"></i> View Profile</button>
-          <a href="#problem-form" class="m-btn m-btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+          <!-- <button class="m-btn m-btn-primary open-popup" data-mentor="0"><i class="fa-solid fa-eye"></i> View Profile</button>
+          <a href="#problem-form" class="m-btn m-btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact</a> -->
+          <a href="https://www.linkedin.com/"
+               target="_blank"
+               onclick="event.stopPropagation()"
+               class="m-btn m-btn-primary">
+               <i class="fa-solid fa-eye"></i> View Profile
+            </a>
+
+            <a href="mailto:test@gmail.com"
+               onclick="event.stopPropagation()"
+               class="m-btn m-btn-outline">
+               <i class="fa-solid fa-paper-plane"></i> Contact
+            </a>
         </div>
       </div>
 
       <!-- Mentor 2 -->
-      <div class="mentor-card reveal d2" data-cat="ai" data-mentor="1">
-        <div class="status-dot"></div>
+      <div class="mentor-card reveal d2" data-cat="career" data-mentor="1">  <!--chossing mentor category-->
+        <!-- <div class="status-dot online"></div> -->
         <div class="mentor-header">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" class="mentor-photo"/>
+          <img src="IMAGES/vivek srivastva.jpeg" alt="" class="mentor-photo"/>
           <div class="mentor-meta">
-            <div class="mentor-name">Priya Sharma</div>
-            <div class="mentor-role">AI/ML Engineer · DeepMind India</div>
+            <div class="mentor-name"> Dr.Vivek Kumar Srivastva</div>
+            <div class="mentor-role">Asst. Professor · Dept. of Applied Science And Humanities, Gec Siwan</div>
             <span class="mentor-exp"><i class="fa-solid fa-briefcase"></i> 6 Years</span>
           </div>
         </div>
@@ -585,13 +613,28 @@
           <span class="skill-tag">Python</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">NLP</span><span class="skill-tag">ML Ops</span>
         </div>
         <div class="mentor-actions">
-          <button class="m-btn m-btn-primary open-popup" data-mentor="1"><i class="fa-solid fa-eye"></i> View Profile</button>
+          <!-- <button class="m-btn m-btn-primary open-popup" data-mentor="1">
+            <i class="fa-solid fa-eye"></i> View Profile</button>
           <a href="#problem-form" class="m-btn m-btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact</a>
-        </div>
-      </div>
+         </div> -->
+
+            <a href="https://www.linkedin.com/"
+               target="_blank"
+               onclick="event.stopPropagation()"
+               class="m-btn m-btn-primary">
+               <i class="fa-solid fa-eye"></i> View Profile
+            </a>
+
+            <a href="mailto:test@gmail.com"
+               onclick="event.stopPropagation()"
+               class="m-btn m-btn-outline">
+               <i class="fa-solid fa-paper-plane"></i> Contact
+            </a>
+          </div>
+         </div>
 
       <!-- Mentor 3 -->
-      <div class="mentor-card reveal d3" data-cat="startup career" data-mentor="2">
+      <div class="mentor-card reveal d3" data-cat="startup" data-mentor="2">  <!--chossing mentor category-->
         <!-- <div class="status-dot busy"></div> -->
         <div class="mentor-header">
           <img src="IMAGES/Aditya Chandra.jpeg" alt="" class="mentor-photo"/>
@@ -606,13 +649,26 @@
           <span class="skill-tag">Pitching</span><span class="skill-tag">Fundraising</span><span class="skill-tag">Product</span><span class="skill-tag">GTM</span>
         </div>
         <div class="mentor-actions">
-          <button class="m-btn m-btn-primary open-popup" data-mentor="2"><i class="fa-solid fa-eye"></i> View Profile</button>
-          <a href="#problem-form" class="m-btn m-btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+          <!-- <button class="m-btn m-btn-primary open-popup" data-mentor="2"><i class="fa-solid fa-eye"></i> View Profile</button>
+          <a href="#problem-form" class="m-btn m-btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact</a> -->
+          <a href="https://www.linkedin.com/"
+               target="_blank"
+               onclick="event.stopPropagation()"
+               class="m-btn m-btn-primary">
+               <i class="fa-solid fa-eye"></i> View Profile
+            </a>
+
+            <a href="mailto:test@gmail.com"
+               onclick="event.stopPropagation()"
+               class="m-btn m-btn-outline">
+               <i class="fa-solid fa-paper-plane"></i> Contact
+            </a>
+
         </div>
       </div>
 
       <!-- Mentor 4 -->
-      <div class="mentor-card reveal d4" data-cat="design" data-mentor="3">
+      <!-- <div class="mentor-card reveal d4" data-cat="design" data-mentor="3">
         <div class="status-dot"></div>
         <div class="mentor-header">
           <img src="https://randomuser.me/api/portraits/women/61.jpg" alt="" class="mentor-photo"/>
@@ -630,10 +686,10 @@
           <button class="m-btn m-btn-primary open-popup" data-mentor="3"><i class="fa-solid fa-eye"></i> View Profile</button>
           <a href="#problem-form" class="m-btn m-btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact</a>
         </div>
-      </div>
+      </div> -->
 
       <!-- Mentor 5 -->
-      <div class="mentor-card reveal d5" data-cat="app web" data-mentor="4">
+      <!-- <div class="mentor-card reveal d5" data-cat="app web" data-mentor="4">
         <div class="status-dot"></div>
         <div class="mentor-header">
           <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="" class="mentor-photo"/>
@@ -651,10 +707,10 @@
           <button class="m-btn m-btn-primary open-popup" data-mentor="4"><i class="fa-solid fa-eye"></i> View Profile</button>
           <a href="#problem-form" class="m-btn m-btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact</a>
         </div>
-      </div>
+      </div> -->
 
       <!-- Mentor 6 -->
-      <div class="mentor-card reveal d6" data-cat="marketing career" data-mentor="5">
+      <!-- <div class="mentor-card reveal d6" data-cat="marketing career" data-mentor="5">
         <div class="status-dot"></div>
         <div class="mentor-header">
           <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="" class="mentor-photo"/>
@@ -672,7 +728,7 @@
           <button class="m-btn m-btn-primary open-popup" data-mentor="5"><i class="fa-solid fa-eye"></i> View Profile</button>
           <a href="#problem-form" class="m-btn m-btn-outline"><i class="fa-solid fa-paper-plane"></i> Contact</a>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </div>
