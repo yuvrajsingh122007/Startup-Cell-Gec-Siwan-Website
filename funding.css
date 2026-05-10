@@ -208,8 +208,58 @@ img {
     border-radius: 2px;
 }
 
-.nav-links a:hover::after {
+/* .nav-links a:hover::after {     Animated underline 
     width: 100%;
+} */
+
+/* .back-btn {
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:13px; font-weight:500; color:var(--muted);
+      background: var(--surface); border:1px solid var(--border);
+      padding:8px 16px; border-radius:100px;
+      text-decoration:none; transition:all 0.2s;
+    }
+    .back-btn:hover { color:var(--text); border-color:rgba(255,255,255,0.18); background:var(--surface2); } */
+
+    .back-btn {
+       display: inline-flex;
+       align-items: center;
+       gap: 10px;
+
+       padding: 14px 28px;
+       border-radius: 999px;
+
+       background: rgba(10, 18, 45, 0.45); /* dark transparent bg */
+       border: 1px solid rgba(255, 255, 255, 0.08);
+
+       color: #bfc9ff;
+       font-size: 16px;
+       font-weight: 500;
+
+       backdrop-filter: blur(12px);
+       -webkit-backdrop-filter: blur(12px);
+
+       box-shadow:
+         inset 0 1px 0 rgba(255,255,255,0.05),
+         0 4px 20px rgba(0,0,0,0.25);
+     
+       transition: all 0.3s ease;
+
+       text-decoration: none;
+   }
+
+  .back-btn:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255,255,255,0.15);
+    background: rgba(15, 25, 60, 0.55);
+  }
+
+  @media (max-width: 480px) {
+  .back-home-btn {
+    padding: 12px 22px;
+    font-size: 14px;
+    gap: 8px;
+  }
 }
 
 .nav-cta {
@@ -657,12 +707,18 @@ section {
 }
 
 .gov-logo-text {
-    font-family: var(--font-heading);
+     font-family: var(--font-heading);
     font-size: 1.2rem;
     font-weight: 700;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; 
+}
+
+.gov-logo-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
 
 .gov-logo-sub {
