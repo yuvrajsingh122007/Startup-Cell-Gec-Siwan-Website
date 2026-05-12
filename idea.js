@@ -6,7 +6,7 @@ const io = new IntersectionObserver(entries => {
 reveals.forEach(el => io.observe(el));
 
 /* ── Character Counter ── */
-const descTA    = document.getElementById('desc');
+const descTA = document.getElementById('desc');
 const charCount = document.getElementById('charCount');
 descTA.addEventListener('input', () => {
   charCount.textContent = descTA.value.length;
@@ -15,7 +15,7 @@ descTA.addEventListener('input', () => {
 
 /* ── Toast System ── */
 function showToast(type, title, message) {
-  const wrap  = document.getElementById('toastWrap');
+  const wrap = document.getElementById('toastWrap');
   const toast = document.createElement('div');
   toast.className = 'toast';
   toast.innerHTML = `
@@ -35,13 +35,13 @@ function showToast(type, title, message) {
 }
 
 /* ── Form Validation & Submit ── */
-const form      = document.getElementById('ideaForm');
+const form = document.getElementById('ideaForm');
 const submitBtn = document.getElementById('submitBtn');
 
 function validateField(input) {
   const ok = input.value.trim() !== '' && (input.type !== 'email' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value));
   input.style.borderColor = ok ? '' : 'rgba(244,63,94,0.6)';
-  input.style.boxShadow   = ok ? '' : '0 0 0 4px rgba(244,63,94,0.1)';
+  input.style.boxShadow = ok ? '' : '0 0 0 4px rgba(244,63,94,0.1)';
   return ok;
 }
 
@@ -51,9 +51,9 @@ form.querySelectorAll('input, textarea').forEach(inp => {
   inp.addEventListener('input', () => inp.style.borderColor = '');
 });
 
-form.addEventListener('submit', function(e) {
+form.addEventListener('submit', function (e) {
   e.preventDefault();
-  const required = ['name','branch','semester','regNo','email','phone','topic','desc'];
+  const required = ['name', 'branch', 'semester', 'regNo', 'email', 'phone', 'topic', 'desc'];
   let valid = true;
   required.forEach(id => { if (!validateField(document.getElementById(id))) valid = false; });
 

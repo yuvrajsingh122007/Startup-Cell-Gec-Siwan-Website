@@ -89,7 +89,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ========== PARALLAX EFFECT FOR BLOBS ==========
+// ========== PARALLAX EFFECT FOR BLOBS ==========//
 window.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX / window.innerWidth;
     const mouseY = e.clientY / window.innerHeight;
